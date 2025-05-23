@@ -22,6 +22,14 @@ _A Spring Boot REST API for managing photo albums with secure authentication_
 - OpenAPI 3.0 (Swagger UI)
 - Maven
 
+- sequenceDiagram
+  -   participant User
+  -   participant API
+  -   User->>API: POST /auth/token (credentials)
+  -   API->>User: Returns JWT
+  -   User->>API: Requests with JWT header
+  -  API->>User: Returns protected data
+
 ## 🚀 Quick Start
 
 ```bash
